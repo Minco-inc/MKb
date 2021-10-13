@@ -1,0 +1,31 @@
+{
+  "name": "mkb",
+  "version": "1.0.0",
+  "description": "MKbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start app.js --watch",
+    "restart": "pm2 stop app.js && pm2 start app.js --watch",
+    "stop": "pm2 stop app.js",
+    "log": "pm2 logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MincoMK/MKb.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Minco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MincoMK/MKb/issues"
+  },
+  "homepage": "https://github.com/MincoMK/MKb#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "disnotify": "^1.2.7"
+  }
+}
