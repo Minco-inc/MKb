@@ -20,10 +20,9 @@ class Main {
 				text: "MKb v" + version + " Ready!"
 			});
 			notify.send();
+			let auto = new Autoload();
+			auto.loadAllModules(this.client);
 		});
-
-		let auto = new Autoload();
-		auto.loadAllModules(this.client);
 	}
 
 	login() {
