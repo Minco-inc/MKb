@@ -18,7 +18,9 @@ class SlashCommandHandler {
 			let cmdOrig = require("../commands/" + f);
 			commands.push(cmdOrig.data.toJSON());
 			client.on("interactionCreate", interaction => {
-				cmdOrig.execute(interaction, client);
+				if (interaction.commandName == cmdOrig.data.name) {
+					cmdOrig.execute(interaction, client);
+				}
 			});
 		});
 		const rest = new REST({ version: '9' }).setToken(token);
